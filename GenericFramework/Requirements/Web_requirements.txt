@@ -1,0 +1,6 @@
+pip==23.2.1
+selenium==3.141.0
+pytest==8.1.1
+logging==0.4.9.8
+iniconfig==2.0.0
+pytest-html==4.1.1
