@@ -1,0 +1,56 @@
+2024-04-17 11:58:09 [DEBUG] Selenium Manager binary found at: C:\Users\vlab\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe
+2024-04-17 11:58:09 [DEBUG] Executing process: C:\Users\vlab\AppData\Local\Programs\Python\Python312\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json
+2024-04-17 11:58:17 [DEBUG] chromedriver not found in PATH
+2024-04-17 11:58:17 [DEBUG] chrome detected at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+2024-04-17 11:58:17 [DEBUG] Running command: wmic datafile where name='C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' get Version /value
+2024-04-17 11:58:17 [DEBUG] Output: "\r\r\n\r\r\nVersion=123.0.6312.107\r\r\n\r\r\n\r\r\n\r"
+2024-04-17 11:58:17 [DEBUG] Detected browser: chrome 123.0.6312.107
+2024-04-17 11:58:17 [DEBUG] Discovering versions from https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json
+2024-04-17 11:58:17 [DEBUG] Required driver: chromedriver 123.0.6312.122
+2024-04-17 11:58:17 [DEBUG] chromedriver 123.0.6312.122 already in the cache
+2024-04-17 11:58:17 [WARNING] Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event): operation timed out
+2024-04-17 11:58:17 [DEBUG] Driver path: C:\Users\vlab\.cache\selenium\chromedriver\win64\123.0.6312.122\chromedriver.exe
+2024-04-17 11:58:17 [DEBUG] Browser path: C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+2024-04-17 11:58:17 [DEBUG] Using driver at: C:\Users\vlab\.cache\selenium\chromedriver\win64\123.0.6312.122\chromedriver.exe
+2024-04-17 11:58:17 [DEBUG] Started executable: `C:\Users\vlab\.cache\selenium\chromedriver\win64\123.0.6312.122\chromedriver.exe` in a child process with pid: 14056 using 0 to output -3
+2024-04-17 11:58:17 [DEBUG] POST http://localhost:52855/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': <PageLoadStrategy.normal: 'normal'>, 'browserVersion': None, 'goog:chromeOptions': {'detach': True, 'extensions': [], 'binary': 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}
+2024-04-17 11:58:17 [DEBUG] Starting new HTTP connection (1): localhost:52855
+2024-04-17 11:58:33 [DEBUG] http://localhost:52855 "POST /session HTTP/1.1" 200 0
+2024-04-17 11:58:33 [DEBUG] Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"123.0.6312.107","chrome":{"chromedriverVersion":"123.0.6312.122 (31f8248cdd90acbac59f700b603fed0b5967ca50-refs/branch-heads/6312@{#824})","userDataDir":"C:\\Users\\vlab\\AppData\\Local\\Temp\\scoped_dir14056_413093890"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:52860"},"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"b1b36bb36355a0c56e7afa5c6ecf28f4"}} | headers=HTTPHeaderDict({'Content-Length': '881', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-17 11:58:33 [DEBUG] Finished Request
+2024-04-17 11:58:33 [DEBUG] POST http://localhost:52855/session/b1b36bb36355a0c56e7afa5c6ecf28f4/url {'url': 'https://practicetestautomation.com/practice-test-login/'}
+2024-04-17 11:58:36 [DEBUG] http://localhost:52855 "POST /session/b1b36bb36355a0c56e7afa5c6ecf28f4/url HTTP/1.1" 200 0
+2024-04-17 11:58:36 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-17 11:58:36 [DEBUG] Finished Request
+2024-04-17 11:58:36 [INFO] opening website
+2024-04-17 11:58:36 [INFO] entering username
+2024-04-17 11:58:36 [DEBUG] POST http://localhost:52855/session/b1b36bb36355a0c56e7afa5c6ecf28f4/element {'using': 'css selector', 'value': '[id="username"]'}
+2024-04-17 11:58:37 [DEBUG] http://localhost:52855 "POST /session/b1b36bb36355a0c56e7afa5c6ecf28f4/element HTTP/1.1" 200 0
+2024-04-17 11:58:37 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.AFED9CB97EC8ABCC95AAED7A3FCBB843.d.C5D1CC864C4F248A53CFCE7FC90C3CD9.e.3"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-17 11:58:37 [DEBUG] Finished Request
+2024-04-17 11:58:37 [DEBUG] POST http://localhost:52855/session/b1b36bb36355a0c56e7afa5c6ecf28f4/element/f.AFED9CB97EC8ABCC95AAED7A3FCBB843.d.C5D1CC864C4F248A53CFCE7FC90C3CD9.e.3/value {'text': 'student', 'value': ['s', 't', 'u', 'd', 'e', 'n', 't']}
+2024-04-17 11:58:37 [DEBUG] http://localhost:52855 "POST /session/b1b36bb36355a0c56e7afa5c6ecf28f4/element/f.AFED9CB97EC8ABCC95AAED7A3FCBB843.d.C5D1CC864C4F248A53CFCE7FC90C3CD9.e.3/value HTTP/1.1" 200 0
+2024-04-17 11:58:37 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-17 11:58:37 [DEBUG] Finished Request
+2024-04-17 11:58:37 [INFO] entering password
+2024-04-17 11:58:37 [DEBUG] POST http://localhost:52855/session/b1b36bb36355a0c56e7afa5c6ecf28f4/element {'using': 'css selector', 'value': '[id="password"]'}
+2024-04-17 11:58:37 [DEBUG] http://localhost:52855 "POST /session/b1b36bb36355a0c56e7afa5c6ecf28f4/element HTTP/1.1" 200 0
+2024-04-17 11:58:37 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.AFED9CB97EC8ABCC95AAED7A3FCBB843.d.C5D1CC864C4F248A53CFCE7FC90C3CD9.e.4"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-17 11:58:37 [DEBUG] Finished Request
+2024-04-17 11:58:37 [DEBUG] POST http://localhost:52855/session/b1b36bb36355a0c56e7afa5c6ecf28f4/element/f.AFED9CB97EC8ABCC95AAED7A3FCBB843.d.C5D1CC864C4F248A53CFCE7FC90C3CD9.e.4/value {'text': 'Password123', 'value': ['P', 'a', 's', 's', 'w', 'o', 'r', 'd', '1', '2', '3']}
+2024-04-17 11:58:37 [DEBUG] http://localhost:52855 "POST /session/b1b36bb36355a0c56e7afa5c6ecf28f4/element/f.AFED9CB97EC8ABCC95AAED7A3FCBB843.d.C5D1CC864C4F248A53CFCE7FC90C3CD9.e.4/value HTTP/1.1" 200 0
+2024-04-17 11:58:37 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-17 11:58:37 [DEBUG] Finished Request
+2024-04-17 11:58:37 [DEBUG] POST http://localhost:52855/session/b1b36bb36355a0c56e7afa5c6ecf28f4/element {'using': 'xpath', 'value': "//button[@id='submit']"}
+2024-04-17 11:58:37 [DEBUG] http://localhost:52855 "POST /session/b1b36bb36355a0c56e7afa5c6ecf28f4/element HTTP/1.1" 200 0
+2024-04-17 11:58:37 [DEBUG] Remote response: status=200 | data={"value":{"element-6066-11e4-a52e-4f735466cecf":"f.AFED9CB97EC8ABCC95AAED7A3FCBB843.d.C5D1CC864C4F248A53CFCE7FC90C3CD9.e.7"}} | headers=HTTPHeaderDict({'Content-Length': '125', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-17 11:58:37 [DEBUG] Finished Request
+2024-04-17 11:58:37 [DEBUG] POST http://localhost:52855/session/b1b36bb36355a0c56e7afa5c6ecf28f4/element/f.AFED9CB97EC8ABCC95AAED7A3FCBB843.d.C5D1CC864C4F248A53CFCE7FC90C3CD9.e.7/click {}
+2024-04-17 11:58:39 [DEBUG] http://localhost:52855 "POST /session/b1b36bb36355a0c56e7afa5c6ecf28f4/element/f.AFED9CB97EC8ABCC95AAED7A3FCBB843.d.C5D1CC864C4F248A53CFCE7FC90C3CD9.e.7/click HTTP/1.1" 200 0
+2024-04-17 11:58:39 [DEBUG] Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-17 11:58:39 [DEBUG] Finished Request
+2024-04-17 11:58:41 [INFO] closing website
+2024-04-17 11:58:41 [DEBUG] DELETE http://localhost:52855/session/b1b36bb36355a0c56e7afa5c6ecf28f4/window {}
+2024-04-17 11:58:42 [DEBUG] http://localhost:52855 "DELETE /session/b1b36bb36355a0c56e7afa5c6ecf28f4/window HTTP/1.1" 200 0
+2024-04-17 11:58:42 [DEBUG] Remote response: status=200 | data={"value":[]} | headers=HTTPHeaderDict({'Content-Length': '12', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})
+2024-04-17 11:58:42 [DEBUG] Finished Request
