@@ -1,0 +1,75 @@
+pipeline {
+agent any
+
+stages {
+    
+    stage('checkout') {
+        steps {
+            deleteDir()
+            bat "git clone https://github.com/lochu-55/Company_training.git"
+        }
+    }
+    
+    
+    stage ("exceuting web") {
+        steps {
+            bat 'dir'
+            dir(path: 'Company_training/Pywinauto GUI') {
+                    bat "python -m pytest Tests/WEB_tests/test_web.py"
+            }
+        }
+        
+        
+        
+        
+    }
+    stage('check node service status and executes gui tests') {
+        steps {
+            script {
+                def os = System.properties['os.name'].toLowerCase()
+                if(os.contains('windows')) {
+                    def serv_stat=bat(script:'sc queryex "jenkins"',returnStatus:true)
+                    try {
+                        if (serv_stat == 0) {
+                            throw new Exception("jenkins running as a service,skipping current stage,not possible to execute notepad test cases...")
+                            
+                        }
+                        else {
+                            dir(path: 'Company_training/Pywinauto GUI') {
+                                bat "python -m pytest Tests/WEB_tests/test_web.py"
+                            }
+                           
+                        }
+                    }
+                    
+                    catch(Exception e) {
+                        echo "Exception:${e.message}"
+                    }
+                    
+                    
+                }
+
+            }
+
+        }
+
+    }
+}
+post {
+    always {
+        script {
+            def log_file_name = "${env.BUILD_ID}_console_log.txt"
+            def consoleLogContent = currentBuild.rawBuild.getLog(1000).join('\n')
+
+            writeFile file: log_file_name, text: consoleLogContent
+
+            emailext subject: 'Pipeline Notification',
+                      body: 'build executed successfully',
+                      to: 'veenanjalitammina999@gmail.com, sripilla94@gmail.com',
+                      attachmentsPattern: "${env.BUILD_ID}_console_log.txt",
+                      attachLog: true
+        }
+    }
+}
+
+}
