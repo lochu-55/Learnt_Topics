@@ -1,0 +1,17 @@
+here i have created an api testing framework
+
+
+steps to run the testcases
+
+
+step-1 : install the requirements given in the requirements.txt file using the command in the cmd
+            "pip install -r requirements.txt"
+
+
+step-2 : open the tests folder and run the tests in the ordered way as-
+            1. post request(test_1_post_method.py)
+            2. get request (test_2_get_method.py)
+            3. put request(test_3_put_method.py)
+            4. delete request(test_4_delete_method.py)
+
+NOTE : update the json data file after completion of test scripts execution because the previous data get stored in the database.

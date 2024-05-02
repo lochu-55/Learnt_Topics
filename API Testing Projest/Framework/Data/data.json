@@ -1,0 +1,39 @@
+{
+    "person": [
+        {
+            "name": "Subash",
+            "email": "subash2024@gmail.com",
+            "gender": "male",
+            "status": "inactive",
+            "id": null
+        },
+        {
+            "name": "Satesh",
+            "email": "satesh1999@gmail.com",
+            "gender": "male",
+            "status": "active",
+            "id": null
+        },
+        {
+            "name": "Gopi",
+            "email": "gopi2007@gmail.com",
+            "gender": "male",
+            "status": "inactive",
+            "id": null
+        },
+        {
+            "name": "Prasad",
+            "email": "prasad2004@gmail.com",
+            "gender": "male",
+            "status": "active",
+            "id": null
+        },
+        {
+            "name": "Ganga",
+            "email": "ganga1989@gmail.com",
+            "gender": "female",
+            "status": "inactive",
+            "id": null
+        }
+    ]
+}
