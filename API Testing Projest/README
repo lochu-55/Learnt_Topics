@@ -14,4 +14,5 @@ step-2 : open the tests folder and run the tests in the ordered way as-
             3. put request(test_3_put_method.py)
             4. delete request(test_4_delete_method.py)
 
-NOTE : update the json data file after completion of test scripts execution because the previous data get stored in the database.
+NOTE : update the json data file after completion of test scripts execution because the previous data get stored in the database by running DataGenerator.py file using the command in the cmd.
+            "python DataGenerator.py"
