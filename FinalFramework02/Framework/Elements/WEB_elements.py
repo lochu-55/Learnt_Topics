@@ -4,8 +4,8 @@ class Locators:
     USER_NAME = (By.ID,"username")
     PASS_WORD = (By.ID,"password")
     LOG_IN = (By.XPATH,"//button[@id='submit']")
-    PATH = r"C:\Users\vlab\PycharmProjects\final_Framework\Base\utils\Screenshots\WEB_SS"
-    LOG_PATH1=r"C:\Users\vlab\PycharmProjects\final_Framework\Base\utils\Logs\WEB_logs\web.log"
+    PATH = r"C:\Users\vlab\Desktop\Company_training\FinalFramework02\Framework\Utilities\Screenshots\WEB_SS"
+    LOG_PATH1=r"C:\Users\vlab\Desktop\Company_training\FinalFramework02\Logs\WEB_logs\web.log"
 
 
 class inputs:

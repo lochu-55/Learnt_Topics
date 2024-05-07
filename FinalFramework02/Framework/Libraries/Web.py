@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.common import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
-from Base.Elements.WEB_elements import Locators
+from Framework.Elements.WEB_elements import Locators
 
 options = Options()
 options.add_experimental_option("detach", True)

@@ -7,7 +7,7 @@ class Objects:
     def __init__(self, filename):
         self.data = []  # Create an empty list to store
         self.filename = filename
-        self.log_obj = Logger(r"../../Logs/API_logs\API.log")
+        self.log_obj = Logger(r"Logs/API_logs/API.log")
         self.log_obj.logger.info(f"Objects class initialised for {self.filename}")
 
     def read_data(self):

@@ -8,4 +8,4 @@ pip==23.2.1
 pillow==10.3.0
 pywinauto==0.6.8
 pyserial==3.5
-
+selenium==4.20.0

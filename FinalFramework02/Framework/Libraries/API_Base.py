@@ -6,7 +6,7 @@ from Framework.Utilities.Logging import Logger
 class Methods:
     def __init__(self):
         config = Config()
-        self.log_obj = Logger(r"../../Logs/API_logs/API.log")
+        self.log_obj = Logger(r"Logs/API_logs/API.log")
         self.url = config.get_url()
         self.authorization = config.get_authorization_token()
 

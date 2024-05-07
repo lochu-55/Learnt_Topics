@@ -11,9 +11,9 @@ c = 0
 def response():
     global c
     met = Methods()
-    old_conf = Objects(r"../../Framework/Elements/Data/data.json")
+    old_conf = Objects(r"Framework/Elements/Data/data.json")
     old_conf.read_data()
-    new_conf = Objects(r"../../Framework/Elements/Data/new_data.json")
+    new_conf = Objects(r"Framework/Elements/Data/new_data.json")
     new_conf.read_data()
     payload = new_conf.data[c]
     value = old_conf.data[c]["id"]
@@ -49,7 +49,7 @@ def test_put_request_body_size(response, log):
 @pytest.mark.api
 def test_put_request_json_schema_validation(response, log):
     try:
-        with open(r"../../Framework/Elements/Data/data.schema.json", 'r') as schema_file:
+        with open(r"Framework/Elements/Data/data.schema.json", 'r') as schema_file:
             schema = json.load(schema_file)
 
         json_response = response.json()

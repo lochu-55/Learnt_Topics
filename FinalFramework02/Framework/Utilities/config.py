@@ -4,7 +4,7 @@ import json
 class Config:
     def __init__(self):
         # Load JSON data from file
-        with open(r"..\..\Framework\Elements\Data\resources.json", 'r') as json_file:
+        with open(r"Framework\Elements\Data\resources.json", 'r') as json_file:
             api_config = json.load(json_file)
 
         # Extract URL and authorization token

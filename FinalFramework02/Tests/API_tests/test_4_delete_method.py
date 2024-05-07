@@ -3,7 +3,7 @@ from Framework.Libraries.API_Base import Methods
 from Framework.Elements.Data.dataobjects import Objects
 
 
-obj = Objects(r"../../Framework/Elements/Data/data.json")
+obj = Objects(r"Framework/Elements/Data/data.json")
 obj.read_data()
 
 

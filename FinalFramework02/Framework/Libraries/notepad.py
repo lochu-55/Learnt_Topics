@@ -3,7 +3,7 @@ import logging
 
 from time import sleep
 from pywinauto.application import Application
-from Base.Elements.GUI_elements import Elements
+from Framework.Elements.GUI_elements import Elements
 from PIL import Image
 
 ele = Elements()

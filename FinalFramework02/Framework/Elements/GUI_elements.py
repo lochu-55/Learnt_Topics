@@ -10,8 +10,8 @@ class Elements:
     FIND_TEXT = "VEDA"
     FIND_TEXT_TO_REPLACE = "VEDA"
     REPLACE_WITH = "SoCtronics"
-    PATH = r"C:\Users\vlab\PycharmProjects\final_Framework\Base\utils\Screenshots\GUI_SS"
-    LOG_PATH2 = r"C:\Users\vlab\PycharmProjects\final_Framework\Base\utils\Logs\GUI_logs\gui.log"
+    PATH = r"C:\Users\vlab\Desktop\Company_training\FinalFramework02\Framework\Utilities\Screenshots\GUI_SS"
+    LOG_PATH2 = r"C:\Users\vlab\Desktop\Company_training\FinalFramework02\Logs\GUI_logs\gui.log"
 
 
 

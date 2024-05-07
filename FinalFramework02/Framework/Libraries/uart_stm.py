@@ -2,14 +2,14 @@ from pywinauto.application import Application
 from pywinauto.timings import TimeoutError
 import logging
 from time import sleep
-from Base.Elements.STM32_elements import STM
-from Base.Libraries.logging import logger
+from Framework.Elements.STM32_elements import STM
+from Framework.Utilities.Logging import Logger
 # pylint: disable=import-error
 from serial import Serial
 from PIL import Image
 
 obj = STM()
-log_obj = logger(obj.LOG_PATH2)
+log_obj = Logger(obj.LOG_PATH2)
 
 class uart_py:
 

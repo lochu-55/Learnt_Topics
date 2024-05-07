@@ -13,7 +13,7 @@ print("Current working directory:", os.getcwd())
 def response():
     global c
     met = Methods()
-    obj = Objects(r"../../Framework/Elements/Data/data.json")
+    obj = Objects(r"Framework/Elements/Data/data.json")
     obj.read_data()
     payload = obj.data[c]
     res = met.post(data=payload)
@@ -50,7 +50,7 @@ def test_post_request_body_size(response, log):
 @pytest.mark.api
 def test_post_request_json_schema_validation(response, log):
     try:
-        with open(r"../../Framework/Elements/Data/data.schema.json", 'r') as schema_file:
+        with open(r"Framework/Elements/Data/data.schema.json", 'r') as schema_file:
             schema = json.load(schema_file)
 
         json_response = response.json()

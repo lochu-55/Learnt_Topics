@@ -8,7 +8,7 @@ import json
 @pytest.fixture
 def response():
     met = Methods()
-    obj = Objects(r"../../Framework/Elements/Data/data.json")
+    obj = Objects(r"Framework/Elements/Data/data.json")
     obj.read_data()
     res = met.get_record(id=obj.data[0]["id"])
     return res
@@ -41,7 +41,7 @@ def test_get_request_body_size(response, log):
 @pytest.mark.api
 def test_get_request_json_schema_validation(response, log):
     try:
-        with open(r"../../Framework/Elements/Data/data.schema.json", 'r') as schema_file:
+        with open(r"Framework/Elements/Data/data.schema.json", 'r') as schema_file:
             schema = json.load(schema_file)
 
         json_response = response.json()
