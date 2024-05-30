@@ -44,6 +44,7 @@ void tasklist (void *p) {
     while(1) {
         vTaskList(mytaskList);
         printf("%s\r\n",mytaskList);
+	printf("the total tick : %d\n",xTaskGetTickCount());
         vTaskDelay(2000);
     }
 }
@@ -73,6 +74,7 @@ task2           B       1       34      2
 task1           B       2       34      1
 Tmr Svc         B       2       233     5
 
+the total tick : 22
 current task running name : task1
 hello,world : 1
 hey Testies...1!
@@ -87,31 +89,31 @@ task2           B       1       34      2
 task1           B       2       34      1
 Tmr Svc         B       2       233     5
 
+the total tick : 2037
 current task running name : task1
 hey Testies...3!
 current task running name : task2
 hey Testies...4!
 current task running name : task2
 task3           X       0       28      3
-IDLE            R       0       117     4
+IDLE            R       0       119     4
 task2           B       1       34      2
 Tmr Svc         B       2       233     5
 
+the total tick : 4051
 task3           X       0       28      3
 IDLE            R       0       119     4
 Tmr Svc         B       2       233     5
 
+the total tick : 6061
 task3           X       0       28      3
 IDLE            R       0       119     4
 Tmr Svc         B       2       233     5
 
-task3           X       0       28      3
-IDLE            R       0       117     4
-Tmr Svc         B       2       233     5
-
+the total tick : 8072
 task3           X       0       28      3
 IDLE            R       0       119     4
 Tmr Svc         B       2       233     5
 
-
+the total tick : 10083
 */
