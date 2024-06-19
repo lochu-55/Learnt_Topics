@@ -1,8 +1,12 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
+#include "semphr.h"
 #include <stdio.h>
 #include <stdarg.h>
+
+// Mutex for synchronized printing
+SemaphoreHandle_t xPrintMutex;
 
 void vPrintString(const char *format, ...) {
     va_list args;
@@ -14,28 +18,43 @@ void vPrintString(const char *format, ...) {
 
 QueueHandle_t xQueue;
 
+void vApplicationIdleHook(void)
+{
+}
+
 void vSenderTask(void *pvParameters) {
     int ivalueToSend = 0;
     UBaseType_t uxNumberOfItems;
 
     for (;;) {
-        // Attempt to send items to the queue
-        if (xQueueSend(xQueue, &ivalueToSend, portMAX_DELAY) == pdPASS) {
-            if (ivalueToSend == 3) {
-            // Reset the queue after sending 3 items
+        // Check the number of items in the queue
+        uxNumberOfItems = uxQueueMessagesWaiting(xQueue);
+
+        if (uxNumberOfItems == 3) {
+            // Reset the queue when it is full with 3 items
             xQueueReset(xQueue);
-            printf("Queue reset\n");
-        }
-            printf("Sent : %d\n", ivalueToSend);
-            ivalueToSend++;
+            xSemaphoreTake(xPrintMutex, portMAX_DELAY);
+            vPrintString("Queue reset\n");
+            xSemaphoreGive(xPrintMutex);
         } else {
-            printf("Failed to send : %d\n", ivalueToSend);
+            // Attempt to send items to the queue
+            if (xQueueSend(xQueue, &ivalueToSend, portMAX_DELAY) == pdPASS) {
+                xSemaphoreTake(xPrintMutex, portMAX_DELAY);
+                vPrintString("Sent: %d\n", ivalueToSend);
+                xSemaphoreGive(xPrintMutex);
+
+                ivalueToSend++;
+            } else {
+                vPrintString("Failed to send: %d\n", ivalueToSend);
+           
+            }
+
+            uxNumberOfItems = uxQueueMessagesWaiting(xQueue);
+
+            xSemaphoreTake(xPrintMutex, portMAX_DELAY);
+            vPrintString("Number of items in the queue: %d\n", uxNumberOfItems);
+            xSemaphoreGive(xPrintMutex);
         }
-
-        
- uxNumberOfItems = uxQueueMessagesWaiting(xQueue);
-
-            vPrintString("number of items in a queue %d\n",uxNumberOfItems);
 
         vTaskDelay(pdMS_TO_TICKS(500));
     }
@@ -47,75 +66,91 @@ void vReceiverTask(void *pvParameters) {
     for (;;) {
         // Attempt to receive items from the queue
         if (xQueueReceive(xQueue, &receivedValue, portMAX_DELAY) == pdPASS) {
-            printf("Received : %d\n", receivedValue);
+            xSemaphoreTake(xPrintMutex, portMAX_DELAY);
+            vPrintString("Received: %d\n", receivedValue);
+            xSemaphoreGive(xPrintMutex);
         } else {
-            printf("Failed to receive\n");
+
+            vPrintString("Failed to receive\n");
+
         }
 
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
 
-
 int main(void) {
     xQueue = xQueueCreate(5, sizeof(int));
-    if (xQueue != NULL) {
-        xTaskCreate(vSenderTask, "sender",130,NULL,1,NULL);
-        xTaskCreate(vReceiverTask, "Receiver", configMINIMAL_STACK_SIZE, NULL, 1, NULL);        
+    xPrintMutex = xSemaphoreCreateMutex();
+
+    if (xQueue != NULL && xPrintMutex != NULL) {
+        xTaskCreate(vSenderTask, "Sender", 130, NULL, 1, NULL);
+        xTaskCreate(vReceiverTask, "Receiver", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
         vTaskStartScheduler();
+    } else {
+        vPrintString("Queue or Mutex creation failed\n");
     }
-    else {
-        printf("Queue creation failed\n");
+
+    for (;;) {
     }
-    for(;;) {
-    }
+
 }
 
 /*
-Sent : Received 0 numb:iteer of items in a queue 0
-Sent : 1
-number of items in a queue 1
-Received : 1
-Sent : 2
-number of items in a queue 1
+Sent: 0
+Number of items in the queue: 1
+Received: 0
+Sent: 1
+Number of items in the queue: 1
+Received: 1
+Sent: 2
+Number of items in the queue: 1
+Sent: 3
+Number of items in the queue: 2
+Received: 2
+Sent: 4
+Number of items in the queue: 2
+Sent: 5
+Number of items in the queue: 3
+Received: 3
+Sent: 6
+Number of items in the queue: 3
 Queue reset
-Sent : 3
-number of items in a queue 0
-Sent : 4Received
-number  ite of items in a queue 0
-Sent : 5
-number of items in a queue 1
-Received : 5
-Sent : 6
-number of items in a queue 1
-Sent : 7
-number of items in a queue 2
-Received : 6
-Sent : 8
-number of items in a queue 2
-Sent : 9
-number of items in a queue 3
-Received : 7
-Sent : 10
-number of items in a queue 3
-Sent : 11
-number of items in a queue 4
-Received : 8
-Sent : 12
-number of items in a queue 4
-Sent : 13
-number of items in a queue 5
-Received : 9
-Sent : 14
-number of items in a queue 5
-ReceiveSent : 1d5
- 10
-5
-number of items in a queue 5
-ReceivedSent : 1 
- 11
-6
-number of items in a queue 5
-
-
+Sent: 7
+Number of items in the queue: 1
+Received: 7
+Sent: 8
+Number of items in the queue: 1
+Received: 8
+Sent: 9
+Number of items in the queue: 1
+Sent: 10
+Number of items in the queue: 2
+Received: 9
+Sent: 11
+Number of items in the queue: 2
+Sent: 12
+Number of items in the queue: 3
+Received: 10
+Sent: 13
+Number of items in the queue: 3
+Queue reset
+Sent: 14
+Number of items in the queue: 1
+Received: 14
+Sent: 15
+Number of items in the queue: 1
+Received: 15
+Sent: 16
+Number of items in the queue: 1
+Sent: 17
+Number of items in the queue: 2
+Received: 16
+Sent: 18
+Number of items in the queue: 2
+Sent: 19
+Number of items in the queue: 3
+Received: 17
+Sent: 20
+Number of items in the queue: 3
 */
