@@ -148,5 +148,6 @@ int main()
         ADC_VAL[1] = ADC_GetValue();
             
     }
+    ADC_Disable();
     
 }
