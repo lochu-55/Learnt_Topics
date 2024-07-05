@@ -1,7 +1,7 @@
 #include "stm32f4xx.h"
-#define PLL_M   16
-#define PLL_N   336
-#define PLL_P   1
+#define PLL_M   4
+#define PLL_N   84
+#define PLL_P   0 //PLL_P = 2
 
 
 void systemClockConfig(void)
