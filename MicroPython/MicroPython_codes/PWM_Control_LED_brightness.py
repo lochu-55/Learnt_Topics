@@ -10,9 +10,6 @@ tim = Timer(2, freq=1000)  # Timer 2, 1 kHz frequency
 # Configure the Timer channel for PWM using pyb module
 ch = tim.channel(1, Timer.PWM, pin=led_pin)
 
-# Set initial duty cycle to 1% using pyb module
-ch.pulse_width_percent(1)
-
 # Function to ramp up and down the PWM duty cycle
 def ramp_pwm():
     try:
