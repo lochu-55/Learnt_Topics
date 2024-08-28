@@ -1,0 +1,30 @@
+from pywinauto.application import Application
+from time import sleep
+app = Application().start("notepad.exe")
+sleep(1)
+main_dlg = app["Untitled - Notepad"]
+
+def test_1():
+    app.UntitledNotepad.print_control_identifiers()
+    main_dlg.maximize()
+    main_dlg.type_keys("hello guys welcome to pywinauto ... you can auto windows GUI applications using pywinauto\n",with_spaces=True,with_newlines=True)
+
+def test_read():
+    main_dlg.menu_select("File->open")
+
+#def test_view_menuitem():
+    #main_dlg.menu_select("View->Zoom")
+    #sleep(2)
+    #main_dlg.ZoomIn.click_input()
+    #sleep(2)
+    #main_dlg.menu_select("View->Zoom")
+    #sleep(2)
+    #main_dlg.ZoomOut.click_input()
+    #main_dlg.child_window(title="View", control_type="MenuItem").click_input()
+    #main_dlg.print_control_identifiers()
+    #main_dlg.child_window(title="Zoom", control_type="MenuItem").click_input()
+    #main_dlg.print_control_identifiers()
+    #main_dlg.child_window(title="Zoom In	Ctrl+Plus", auto_id="34", control_type="MenuItem").click_input()
+
+
+

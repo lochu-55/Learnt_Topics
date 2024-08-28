@@ -11,12 +11,19 @@
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
+<<<<<<< HEAD
       <uAC6>0</uAC6>
+=======
+>>>>>>> 6ddf5bfaa9da0da3c93a81a016f451a9a91e29b9
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F411VETx</Device>
           <Vendor>STMicroelectronics</Vendor>
+<<<<<<< HEAD
           <PackID>Keil.STM32F4xx_DFP.2.14.0</PackID>
+=======
+          <PackID>Keil.STM32F4xx_DFP.2.16.0</PackID>
+>>>>>>> 6ddf5bfaa9da0da3c93a81a016f451a9a91e29b9
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000,0x20000) IROM(0x08000000,0x80000) CPUTYPE("Cortex-M4") FPU2 CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -184,7 +191,10 @@
             <hadXRAM>0</hadXRAM>
             <uocXRam>0</uocXRam>
             <RvdsVP>2</RvdsVP>
+<<<<<<< HEAD
             <RvdsMve>0</RvdsMve>
+=======
+>>>>>>> 6ddf5bfaa9da0da3c93a81a016f451a9a91e29b9
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -325,7 +335,10 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
+<<<<<<< HEAD
             <uGnu>0</uGnu>
+=======
+>>>>>>> 6ddf5bfaa9da0da3c93a81a016f451a9a91e29b9
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
             <v6LangP>1</v6LangP>
@@ -472,7 +485,11 @@
       <file attr="config" category="source" condition="STM32F411xE_ARMCC" name="Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f411xe.s" version="2.6.0">
         <instance index="0">RTE\Device\STM32F411VETx\startup_stm32f411xe.s</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="2.6.3" condition="STM32F4 CMSIS"/>
+<<<<<<< HEAD
         <package name="STM32F4xx_DFP" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
+=======
+        <package name="STM32F4xx_DFP" schemaVersion="1.7.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.16.0"/>
+>>>>>>> 6ddf5bfaa9da0da3c93a81a016f451a9a91e29b9
         <targetInfos>
           <targetInfo name="Target 1"/>
         </targetInfos>
@@ -480,15 +497,24 @@
       <file attr="config" category="source" name="Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" version="2.6.0">
         <instance index="0">RTE\Device\STM32F411VETx\system_stm32f4xx.c</instance>
         <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="2.6.3" condition="STM32F4 CMSIS"/>
+<<<<<<< HEAD
         <package name="STM32F4xx_DFP" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="Keil" version="2.14.0"/>
+=======
+        <package name="STM32F4xx_DFP" schemaVersion="1.7.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.16.0"/>
+>>>>>>> 6ddf5bfaa9da0da3c93a81a016f451a9a91e29b9
         <targetInfos>
           <targetInfo name="Target 1"/>
         </targetInfos>
       </file>
       <file attr="config" category="header" condition="CoreM" name="Config\ARMCM\FreeRTOSConfig.h" version="9.0.0">
         <instance index="0">RTE\RTOS\FreeRTOSConfig.h</instance>
+<<<<<<< HEAD
         <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Config" Cvariant="FreeRTOS" Cvendor="ARM" Cversion="10.2.0" condition="FreeRTOS Core"/>
         <package license="License/license.txt" name="CMSIS-FreeRTOS" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="ARM" version="10.2.0"/>
+=======
+        <component Cbundle="FreeRTOS" Cclass="RTOS" Cgroup="Config" Cvariant="FreeRTOS" Cvendor="ARM" Cversion="10.4.6" condition="FreeRTOS Config Native"/>
+        <package license="License/license.txt" name="CMSIS-FreeRTOS" schemaVersion="1.4" url="http://www.keil.com/pack/" vendor="ARM" version="10.4.6"/>
+>>>>>>> 6ddf5bfaa9da0da3c93a81a016f451a9a91e29b9
         <targetInfos>
           <targetInfo name="Target 1"/>
         </targetInfos>

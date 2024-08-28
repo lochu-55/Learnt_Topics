@@ -1,0 +1,4 @@
+2024-04-08 11:40:09,875 - my_logger - INFO - opening website
+2024-04-08 11:40:09,877 - my_logger - INFO - entering username
+2024-04-08 11:40:09,993 - my_logger - INFO - entering password
+2024-04-08 11:40:11,228 - my_logger - INFO - closing website

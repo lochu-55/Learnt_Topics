@@ -1,0 +1,45 @@
+2024-05-06 13:32:27,050 : Framework.Utilities.Logging : INFO : Objects class initialised for Framework/Elements/Data/data.json
+2024-05-06 13:32:27,052 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:27,052 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:27,053 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:27,054 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:27,055 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:28,937 : Framework.Utilities.Logging : INFO : data sent to the api using post request
+2024-05-06 13:32:28,939 : Framework.Utilities.Logging : INFO : sent data to the file Framework/Elements/Data/data.json
+2024-05-06 13:32:28,942 : Framework.Utilities.Logging : INFO : tested status code
+2024-05-06 13:32:28,970 : Framework.Utilities.Logging : INFO : Objects class initialised for Framework/Elements/Data/data.json
+2024-05-06 13:32:28,980 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:28,980 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:28,981 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:28,982 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:28,983 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:30,616 : Framework.Utilities.Logging : INFO : data sent to the api using post request
+2024-05-06 13:32:30,618 : Framework.Utilities.Logging : INFO : sent data to the file Framework/Elements/Data/data.json
+2024-05-06 13:32:30,619 : Framework.Utilities.Logging : INFO : tested response time
+2024-05-06 13:32:30,627 : Framework.Utilities.Logging : INFO : Objects class initialised for Framework/Elements/Data/data.json
+2024-05-06 13:32:30,637 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:30,638 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:30,639 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:30,639 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:30,640 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:31,892 : Framework.Utilities.Logging : INFO : data sent to the api using post request
+2024-05-06 13:32:31,894 : Framework.Utilities.Logging : INFO : sent data to the file Framework/Elements/Data/data.json
+2024-05-06 13:32:31,896 : Framework.Utilities.Logging : INFO : tested context type
+2024-05-06 13:32:31,903 : Framework.Utilities.Logging : INFO : Objects class initialised for Framework/Elements/Data/data.json
+2024-05-06 13:32:31,911 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:31,912 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:31,913 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:31,914 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:31,915 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:33,476 : Framework.Utilities.Logging : INFO : data sent to the api using post request
+2024-05-06 13:32:33,479 : Framework.Utilities.Logging : INFO : sent data to the file Framework/Elements/Data/data.json
+2024-05-06 13:32:33,481 : Framework.Utilities.Logging : INFO : tested body size
+2024-05-06 13:32:33,487 : Framework.Utilities.Logging : INFO : Objects class initialised for Framework/Elements/Data/data.json
+2024-05-06 13:32:33,500 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:33,502 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:33,502 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:33,503 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:33,505 : Framework.Utilities.Logging : INFO : data in the file Framework/Elements/Data/data.json loaded
+2024-05-06 13:32:34,798 : Framework.Utilities.Logging : INFO : data sent to the api using post request
+2024-05-06 13:32:34,800 : Framework.Utilities.Logging : INFO : sent data to the file Framework/Elements/Data/data.json
+2024-05-06 13:32:34,803 : Framework.Utilities.Logging : INFO : tested json schema

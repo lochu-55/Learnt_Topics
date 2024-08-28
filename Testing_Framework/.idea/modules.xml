@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
@@ -5,4 +6,13 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/Testing_Framework.iml" filepath="$PROJECT_DIR$/.idea/Testing_Framework.iml" />
     </modules>
   </component>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Testing_Framework.iml" filepath="$PROJECT_DIR$/.idea/Testing_Framework.iml" />
+    </modules>
+  </component>
+>>>>>>> 6ddf5bfaa9da0da3c93a81a016f451a9a91e29b9
 </project>

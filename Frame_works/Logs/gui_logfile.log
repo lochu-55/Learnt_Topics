@@ -1,0 +1,4 @@
+2024-04-08 11:40:30,259 - my_logger - INFO - opening gui application
+2024-04-08 11:40:32,301 - my_logger - INFO - editing text in notepad
+2024-04-08 11:40:34,309 - my_logger - INFO - saving file in notepad
+2024-04-08 11:40:38,991 - my_logger - INFO - closing notepad

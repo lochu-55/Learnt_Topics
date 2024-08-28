@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Generated schema for Root",
@@ -26,4 +27,34 @@
     "gender",
     "status"
   ]
+=======
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "email",
+    "gender",
+    "status"
+  ]
+>>>>>>> 6ddf5bfaa9da0da3c93a81a016f451a9a91e29b9
 }

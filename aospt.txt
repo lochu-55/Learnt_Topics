@@ -1,0 +1,3 @@
+Android Platform Architecture
+Components of Android
+Activity life cycle

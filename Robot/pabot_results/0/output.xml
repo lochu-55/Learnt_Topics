@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-04-03T10:01:47.455614" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="POM test" source="C:\Users\vlab\PycharmProjects\Robot\Testcases\POM_test.robot">
+<test id="s1-s1-t1" name="Login Test" line="14">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-03T10:01:49.115063" elapsed="0.000000"/>
+</kw>
+<kw name="Open_my_browser" owner="POM_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-03T10:01:49.117174" level="INFO">Opening browser 'chrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
+<msg time="2024-04-03T10:01:56.725214" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event): operation timed out</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-03T10:01:49.116121" elapsed="65.451017"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-03T10:02:54.567138" elapsed="0.704407"/>
+</kw>
+<arg>${siteURL}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-04-03T10:01:49.116121" elapsed="66.155424"/>
+</kw>
+<kw name="Enter username" owner="POM_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-03T10:02:55.279540" level="INFO">Typing text 'tutorial' into text field 'name:userName'.</msg>
+<arg>${txt_loginuser}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-03T10:02:55.274544" elapsed="2.010024"/>
+</kw>
+<arg>${user}</arg>
+<status status="PASS" start="2024-04-03T10:02:55.272545" elapsed="2.012023"/>
+</kw>
+<kw name="Enter password" owner="POM_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-03T10:02:57.287905" level="INFO">Typing text 'tutorial' into text field 'name:password'.</msg>
+<arg>${txt_loginpassword}</arg>
+<arg>${pswd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-03T10:02:57.285624" elapsed="1.865011"/>
+</kw>
+<arg>${pwd}</arg>
+<status status="PASS" start="2024-04-03T10:02:57.284568" elapsed="1.866067"/>
+</kw>
+<kw name="Click SignIn" owner="POM_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-03T10:02:59.151654" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<arg>${loginbtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-03T10:02:59.151654" elapsed="7.658127"/>
+</kw>
+<status status="PASS" start="2024-04-03T10:02:59.150635" elapsed="7.659146"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-03T10:03:09.810659" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-03T10:03:06.809781" elapsed="3.000878"/>
+</kw>
+<kw name="Successful login" owner="POM_keywords">
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-03T10:03:10.365740" level="INFO">Page title is 'Login: Mercury Tours'.</msg>
+<arg>Login: Mercury Tours</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-04-03T10:03:09.810659" elapsed="0.555081"/>
+</kw>
+<status status="PASS" start="2024-04-03T10:03:09.810659" elapsed="0.555081"/>
+</kw>
+<kw name="Closing" owner="POM_keywords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-04-03T10:03:10.366811" elapsed="13.302189"/>
+</kw>
+<status status="PASS" start="2024-04-03T10:03:10.365740" elapsed="13.303772"/>
+</kw>
+<status status="PASS" start="2024-04-03T10:01:49.114013" elapsed="94.555499"/>
+</test>
+<status status="PASS" start="2024-04-03T10:01:47.541657" elapsed="96.128445"/>
+</suite>
+<status status="PASS" start="2024-04-03T10:01:47.497979" elapsed="96.175240"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="POM test">Suites.POM test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-04-03T10:01:56.725214" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event): operation timed out</msg>
+</errors>
+</robot>

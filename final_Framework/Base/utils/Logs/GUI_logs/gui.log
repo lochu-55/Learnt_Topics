@@ -1,0 +1,4 @@
+2024-05-02 11:31:45,692 : Base.Libraries.logging : INFO : opening notepad
+2024-05-02 11:31:48,114 : Base.Libraries.logging : INFO : Editing text in notepad
+2024-05-02 11:31:50,310 : Base.Libraries.logging : INFO : checking that text edited correctly
+2024-05-02 11:31:50,311 : Base.Libraries.logging : INFO : Closing notepad

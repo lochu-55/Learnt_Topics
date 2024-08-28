@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.0 on win32)" generated="2024-04-03T10:32:14.085216" rpa="false" schemaversion="5">
+<suite id="s1" name="UserDefinedKeywords" source="C:\Users\vlab\PycharmProjects\Robot\TestCases\UserDefinedKeywords.robot">
+<test id="s1-t1" name="TC1" line="9">
+<kw name="LoginBrowser" owner="resources">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-03T10:32:15.825784" elapsed="0.001039"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-03T10:32:15.826823" level="INFO">Opening browser 'headlesschrome' to base url 'https://demo.guru99.com/test/newtours/'.</msg>
+<arg>${appurl}</arg>
+<arg>${appbrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-03T10:32:15.826823" elapsed="41.888781"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-03T10:32:57.715604" elapsed="0.681575"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-04-03T10:32:58.968437" level="INFO">${title} = Welcome: Mercury Tours</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-04-03T10:32:58.397179" elapsed="0.571258"/>
+</kw>
+<return>
+<value>${title}</value>
+<status status="PASS" start="2024-04-03T10:32:58.968437" elapsed="0.001122"/>
+</return>
+<msg time="2024-04-03T10:32:58.969559" level="INFO">${pageTitle} = Welcome: Mercury Tours</msg>
+<var>${pageTitle}</var>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<status status="PASS" start="2024-04-03T10:32:15.824746" elapsed="43.144813"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${pageTitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-04-03T10:32:58.971813" elapsed="0.001158"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-03T10:32:58.975273" level="INFO">Welcome: Mercury Tours</msg>
+<arg>${pageTitle}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-03T10:32:58.975273" elapsed="0.001115"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-03T10:32:58.978655" level="INFO">Typing text 'lochu5viehya@gmail.com' into text field 'userName'.</msg>
+<arg>userName</arg>
+<arg>lochu5viehya@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-03T10:32:58.977539" elapsed="1.837798"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-03T10:33:00.817582" level="INFO">Typing text 'Lovely@3455' into text field 'password'.</msg>
+<arg>password</arg>
+<arg>Lovely@3455</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-03T10:33:00.816465" elapsed="1.823640"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-03T10:33:02.641247" elapsed="2.757036"/>
+</kw>
+<status status="PASS" start="2024-04-03T10:32:15.824746" elapsed="49.575820"/>
+</test>
+<status status="PASS" start="2024-04-03T10:32:14.088363" elapsed="51.316616"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="UserDefinedKeywords">UserDefinedKeywords</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-04-03T10:32:15.821601" level="WARN">Error in file 'C:\Users\vlab\PycharmProjects\Robot\Resources\resources.robot' on line 11: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>

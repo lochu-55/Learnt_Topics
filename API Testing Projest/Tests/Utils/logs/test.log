@@ -1,0 +1,16 @@
+INFO     root:dataobjects.py:10 Objects class initialised for ../../Framework/Data/data.json
+INFO     root:dataobjects.py:34 data in the file ../../Framework/Data/data.json loaded
+INFO     root:dataobjects.py:34 data in the file ../../Framework/Data/data.json loaded
+INFO     root:dataobjects.py:34 data in the file ../../Framework/Data/data.json loaded
+INFO     root:dataobjects.py:34 data in the file ../../Framework/Data/data.json loaded
+INFO     root:dataobjects.py:34 data in the file ../../Framework/Data/data.json loaded
+INFO     root:Base.py:59 deleting data from the api using delete request
+INFO     root:test_4_delete_method.py:18 tested status code
+INFO     root:Base.py:59 deleting data from the api using delete request
+INFO     root:test_4_delete_method.py:18 tested status code
+INFO     root:Base.py:59 deleting data from the api using delete request
+INFO     root:test_4_delete_method.py:18 tested status code
+INFO     root:Base.py:59 deleting data from the api using delete request
+INFO     root:test_4_delete_method.py:18 tested status code
+INFO     root:Base.py:59 deleting data from the api using delete request
+INFO     root:test_4_delete_method.py:18 tested status code

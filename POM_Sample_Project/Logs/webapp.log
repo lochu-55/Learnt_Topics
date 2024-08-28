@@ -1,0 +1,10 @@
+2024-04-08 10:45:07,709 : Pages.LoginPage : INFO : initiating setup class...
+2024-04-08 10:45:07,829 : Pages.LoginPage : INFO : maximizing the window...
+2024-04-08 10:45:08,300 : Pages.LoginPage : INFO : clear the username text box
+2024-04-08 10:45:08,374 : Pages.LoginPage : INFO : entering the username
+2024-04-08 10:45:08,420 : Pages.LoginPage : INFO : clear the password text box
+2024-04-08 10:45:08,523 : Pages.LoginPage : INFO : entering the password
+2024-04-08 10:45:10,120 : Pages.LoginPage : INFO : clicking the login button
+2024-04-08 10:45:10,634 : Pages.LoginPage : INFO : clicking the welcome link
+2024-04-08 10:45:12,242 : Pages.LoginPage : INFO : clicking logout
+2024-04-08 10:45:16,594 : Pages.LoginPage : INFO : tearing down the class...

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2024-05-06 14:21:55,860 : Base.Libraries.logging : INFO : Error deleting record with ID 6891369: 404 Client Error: Not Found for url: https://gorest.co.in/public/v2/users/6891369
 2024-05-06 14:21:55,863 : Base.Libraries.logging : INFO : tested status code
 2024-05-06 14:21:57,533 : Base.Libraries.logging : INFO : Error deleting record with ID 6891370: 404 Client Error: Not Found for url: https://gorest.co.in/public/v2/users/6891370
@@ -173,3 +174,8 @@
 2024-05-06 14:25:43,151 : Base.Libraries.logging : INFO : tested status code
 2024-05-06 14:25:44,702 : Base.Libraries.logging : INFO : deleting data from the api using delete request
 2024-05-06 14:25:44,705 : Base.Libraries.logging : INFO : tested status code
+=======
+2024-05-06 17:23:27,061 : Base.Libraries.logging : INFO : entering username
+2024-05-06 17:23:27,837 : Base.Libraries.logging : INFO : entering password
+2024-05-06 17:23:30,250 : Base.Libraries.logging : INFO : closing website
+>>>>>>> 6ddf5bfaa9da0da3c93a81a016f451a9a91e29b9
