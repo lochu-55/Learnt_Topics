@@ -18,6 +18,7 @@ class common:
         self.ph = 'default-1234567890'
         self.ticket_number = self.get_last_ticket_number()
         self.saved = False
+        self.current_version = 0
 
     def get_last_ticket_number(self):
         """Read the last ticket number from a file."""
@@ -37,8 +38,9 @@ class common:
             print("Details are already saved. No need to save again.")
             return
 
-        # Automatically assign a ticket filename with an incremented number
-        file_name = f"ticket{self.ticket_number}.txt"
+        # Generate a new file name using the incremented ticket number
+        base_file_name = f"ticket{self.ticket_number}"
+        file_name = f"{base_file_name}.txt"
         full_path = os.path.join(Paths.automatic_ticket_dir, file_name)
 
         # Display and save ticket details
@@ -47,6 +49,7 @@ class common:
             f"Source: {self.src}\nDestination: {self.dest}\nDate: {self.d}\nName: {self.nm}\nAge: {self.age}\nPhone No: {self.ph}\n"
         )
 
+        # Save ticket details to the file
         with open(full_path, "w") as file:
             file.write(f"Source: {self.src}\n")
             file.write(f"Destination: {self.dest}\n")
@@ -55,11 +58,13 @@ class common:
             file.write(f"Age: {self.age}\n")
             file.write(f"Phone Number: {self.ph}\n")
 
-        print(f"Ticket details saved as {file_name}.")
-        self.ticket_number += 1  # Increment the ticket number
-        self.update_last_ticket_number()  # Save the new ticket number to the file
+        print(f"Ticket details saved as {os.path.basename(full_path)}.")
 
-        # Set flag to indicate save completion
+        # Increment the ticket number after saving
+        self.ticket_number += 1  # Increment the ticket number
+        self.update_last_ticket_number()
+
+        # Set the saved flag to True to indicate successful save
         self.saved = True
 
     def save_as(self):

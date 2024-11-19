@@ -8,58 +8,65 @@ class BusTicketBooking(common):
         print("**** WELCOME TO BUS TICKET BOOKING ****")
 
     def read_src(self):
-        user_input = input(f"Enter source (default: {self.src}): ")
-        if user_input:
+        print(f"Enter source (default: {self.src}): ")
+        user_input = input()
+        if user_input and user_input != self.src:
             self.src = user_input
-            self.saved = False  # Reset save flag
+            self.saved = False  # Reset saved flag when a change is made
         return self.src
 
     def read_dest(self):
-        user_input = input(f"Enter destination (default: {self.dest}): ")
-        if user_input:
+        print(f"Enter destination (default: {self.dest}): ")
+        user_input = input()
+        if user_input and user_input != self.dest:
             self.dest = user_input
-            self.saved = False  # Reset save flag
+            self.saved = False  # Reset saved flag when a change is made
         return self.dest
 
-    def read_name(self):
-        user_input = input(f"Enter name (default: {self.nm}): ")
-        if user_input:
-            self.nm = user_input
-            self.saved = False  # Reset save flag
-        return self.nm
-
     def read_date(self):
-        user_input = input(f"Enter travel date (YYYY-MM-DD, default: {self.d.strftime('%Y-%m-%d')}): ")
+        print(f"Enter travel date (YYYY-MM-DD, default: {self.d.strftime('%Y-%m-%d')}): ")
+        user_input = input()
         if user_input:
             try:
                 travel_date = datetime.strptime(user_input, '%Y-%m-%d')
-                if travel_date < datetime.now():
-                    print("Travel date cannot be in the past.")
-                    return
-                self.d = travel_date
-                self.saved = False  # Reset save flag
+                if travel_date != self.d:
+                    if travel_date < datetime.now():
+                        print("Travel date cannot be in the past.")
+                        return
+                    self.d = travel_date
+                    self.saved = False  # Reset saved flag when a change is made
             except ValueError:
                 print("Invalid date format. Please enter in YYYY-MM-DD format.")
         return self.d
 
+    def read_name(self):
+        print(f"Enter name (default: {self.nm}): ")
+        user_input = input()
+        if user_input and user_input != self.nm:
+            self.nm = user_input
+            self.saved = False  # Reset saved flag when a change is made
+        return self.nm
+
     def read_age(self):
         try:
-            user_input = input(f"Enter your age (default: {self.age}): ")
+            print(f"Enter your age (default: {self.age}): ")
+            user_input = input()
             if user_input:
-                self.age = int(user_input)
-                if self.age <= 0:
-                    raise ValueError
-                self.saved = False  # Reset save flag
+                new_age = int(user_input)
+                if new_age != self.age and new_age > 0:
+                    self.age = new_age
+                    self.saved = False  # Reset saved flag when a change is made
         except ValueError:
             print("Invalid age. Please enter a positive integer.")
         return self.age
 
     def read_phone(self):
-        user_input = input(f"Enter your phone number (default: {self.ph}): ")
-        if user_input:
+        print(f"Enter your phone number (default: {self.ph}): ")
+        user_input = input()
+        if user_input and user_input != self.ph:
             if user_input.isdigit() and len(user_input) >= 10:
                 self.ph = user_input
-                self.saved = False  # Reset save flag
+                self.saved = False  # Reset saved flag when a change is made
             else:
                 print("Invalid phone number. It should contain at least 10 digits.")
         return self.ph
@@ -91,7 +98,7 @@ class BusTicketBooking(common):
         print("2. Enter name")
         print("3. Save entered date and name")
         print("4. Save entered details to a file (Save As)")
-        print("5. Back to Menu Menu")
+        print("5. Back to Main Menu")
         print("6. Go to Next menu")
         print("7. Quit")
 
@@ -156,17 +163,20 @@ class BusTicketBooking(common):
         while True:
             if self.current_menu == 'main':
                 self.menu()
-                choice = input("Select an option: ")
+                print("Select an option: ")
+                choice = input()
                 self.handle_main_menu(choice)
 
             elif self.current_menu == 'date_name':
                 self.submenu1()
-                sub_choice = input("Select an option: ")
+                print("Select an option: ")
+                sub_choice = input()
                 self.handle_submenu1(sub_choice)
 
             elif self.current_menu == 'age_phno':
                 self.submenu2()
-                sub_choice = input("Select an option: ")
+                print("select an option: ")
+                sub_choice = input()
                 self.handle_submenu2(sub_choice)
 
 

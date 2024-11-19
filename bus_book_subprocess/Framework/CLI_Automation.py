@@ -6,11 +6,16 @@ import re
 import sys
 import os
 from Core.dev.Common_opts import Paths
+from Core.dev.dev_bus_ticket import *
 
 class CLTAuto:
     def __init__(self):
-        print("Initializing CLTool...")
+        print("Initializing CLI Tool...")
         self.sheet = pd.read_excel(Paths.excel_path)
+        self.process = None
+        self.output_thread = None
+
+    def start_process(self):
         self.process = subprocess.Popen(
             ["python3", "-m", "Core.dev.dev_bus_ticket"],
             stdin=subprocess.PIPE,
@@ -19,7 +24,6 @@ class CLTAuto:
             text=True,
             bufsize=1
         )
-        self.output_thread = None
 
     def get_test_ids(self):
         """Retrieve all test IDs from the Excel sheet."""
@@ -31,18 +35,43 @@ class CLTAuto:
         if filtered_row.empty:
             raise ValueError(f"Test ID {test_id} not found in the sheet.")
         data_dict = {
-            "Source": filtered_row['src'].iloc[0],
-            "Destination": filtered_row['dest'].iloc[0],
-            "Date": filtered_row['date'].iloc[0].strftime('%Y-%m-%d'),
-            "Name": filtered_row['name'].iloc[0],
-            "Age": str(filtered_row['age'].iloc[0]),
-            "Phone_Number": str(filtered_row['ph no.'].iloc[0])
+            "Source": (
+                filtered_row['src'].iloc[0]
+                if 'src' in filtered_row and not filtered_row['src'].empty and pd.notna(filtered_row['src'].iloc[0])
+                else ''
+            ),
+            "Destination": (
+                filtered_row['dest'].iloc[0]
+                if 'dest' in filtered_row and not filtered_row['dest'].empty and pd.notna(filtered_row['dest'].iloc[0])
+                else ''
+            ),
+            "Date": (
+                filtered_row['date'].iloc[0].strftime('%Y-%m-%d')
+                if 'date' in filtered_row and not filtered_row['date'].empty and pd.notna(filtered_row['date'].iloc[0])
+                else ''
+            ),
+            "Name": (
+                filtered_row['name'].iloc[0]
+                if 'name' in filtered_row and not filtered_row['name'].empty and pd.notna(filtered_row['name'].iloc[0])
+                else ''
+            ),
+            "Age": (
+                int(filtered_row['age'].iloc[0])
+                if 'age' in filtered_row and not filtered_row['age'].empty and pd.notna(filtered_row['age'].iloc[0])
+                else ''
+            ),
+            "Phone_Number": (
+                int(filtered_row['ph no.'].iloc[0])
+                if 'ph no.' in filtered_row and not filtered_row['ph no.'].empty and pd.notna(
+                    filtered_row['ph no.'].iloc[0])
+                else ''
+            )
         }
         return data_dict
 
     def enter_data(self, inputs):
         """Send inputs dynamically to the subprocess based on prompts."""
-
+        time.sleep(1)
         def read_output():
             """Continuously read and display output from the subprocess."""
             while True:
@@ -60,16 +89,19 @@ class CLTAuto:
         # Send inputs sequentially
 
         for user_input in inputs:
-            print(user_input)  # Display the input being sent
-            self.process.stdin.write(user_input + '\n')
+            # Display the input being sent
+            self.process.stdin.write(str(user_input) + '\n')
             self.process.stdin.flush()
+            print(user_input)
             time.sleep(1)
+
 
     def close_process(self):
         """Terminate the subprocess."""
         self.process.terminate()
         if self.output_thread:
             self.output_thread.join()
+        self.process = None
 
     def ticket_file_data(self, file_path):
         result_dict = {}
@@ -130,11 +162,14 @@ class CLTAuto:
     def compare(self, booking_details, expected_output):
         # Compare extracted booking details with expected output
         print("\nComparison with Expected Output:")
+        status = "OK"
+        print(f"Excel output: {expected_output}")
+        print(f"extracted output: {booking_details}")
         for key, expected_value in expected_output.items():
             extracted_value = booking_details.get(key)
             if extracted_value == expected_value:
                 print(f"{key}: Match")
-                return "OK"
             else:
                 print(f"{key}: Mismatch (Expected: {expected_value}, Got: {extracted_value})")
-                return "NOT OK"
+                status = "NOT OK"
+        return status

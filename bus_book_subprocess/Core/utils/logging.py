@@ -2,16 +2,17 @@ import os
 import logging
 from Core.dev.Common_opts import Paths
 
-def get_logger(test_case_id):
-    log_dir = Paths.log_dir
+def get_logger():
+    log_dir = Paths.Log_dir
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
 
-
-    logger = logging.getLogger(test_case_id)
+    # Use a static name for the logger or generate a unique one (e.g., based on timestamp)
+    logger = logging.getLogger("simple_logger")  # Static logger name
     logger.setLevel(logging.DEBUG)  # Capture all logs (DEBUG and higher)
 
-    log_file = os.path.join(log_dir, f"test_case_{test_case_id}.log")
+    # Create a log file with a generic name (e.g., "app.log")
+    log_file = os.path.join(log_dir, "test.log")
     file_handler = logging.FileHandler(log_file, mode='w')
     file_handler.setLevel(logging.DEBUG)  # Capture all logs in the file
 
