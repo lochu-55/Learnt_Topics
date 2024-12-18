@@ -1,0 +1,12 @@
+../Drivers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
+../Core/Src/test_taskCreate_printf.c:19:6:setUp	4	static
+../Core/Src/test_taskCreate_printf.c:23:6:tearDown	4	static
+../Core/Src/test_taskCreate_printf.c:29:12:create_task	16	static
+../Core/Src/test_taskCreate_printf.c:33:6:test_task_creation	24	static
+../Core/Src/test_taskCreate_printf.c:39:5:main	8	static
+../Core/Src/test_taskCreate_printf.c:63:6:Task1_Handler	24	static
+../Core/Src/test_taskCreate_printf.c:73:6:vApplicationIdleHook	4	static
+../Core/Src/test_taskCreate_printf.c:80:6:SystemClock_Config	88	static
+../Core/Src/test_taskCreate_printf.c:119:13:MX_GPIO_Init	48	static
+../Core/Src/test_taskCreate_printf.c:143:5:_write	32	static
+../Core/Src/test_taskCreate_printf.c:155:6:Error_Handler	4	static,ignoring_inline_asm

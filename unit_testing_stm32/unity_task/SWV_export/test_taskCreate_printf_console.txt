@@ -1,0 +1,17 @@
+SWV ITM Data Console - ITM Port: 0
+./Core/Src/test_taskCreate_printf.c:48:test_task_creation:PASS
+
+-----------------------
+1 Tests 0 Failures 0 Ignored 
+OK
+Starting project
+hello,world : 0
+hello,world : 1
+hello,world : 2
+hello,world : 3
+hello,world : 4
+hello,world : 5
+hello,world : 6
+hello,world : 7
+hello,world : 8
+hello,world : 9
