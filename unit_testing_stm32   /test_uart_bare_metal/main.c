@@ -75,3 +75,27 @@ int main(void)
     
     } 
 }
+
+
+/*
+vlab@lochu:~$ stty -F /dev/ttyACM0 115200 cs8 -cstopb -parenb
+vlab@lochu:~$ cat /dev/ttyACM0 
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+Lochu
+*/
