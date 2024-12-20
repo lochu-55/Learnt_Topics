@@ -1,0 +1,9 @@
+SWV ITM Data Console - ITM Port: 0
+Please send a string via UART to test UART reception...
+Received string: lochuuu
+../Core/Src/test_hal_uart_receive_driver.c:71:test_uart_driver_receive:INFO: UART reception test complete. Verify received string in the console output.
+../Core/Src/test_hal_uart_receive_driver.c:142:test_uart_driver_receive:PASS
+
+-----------------------
+1 Tests 0 Failures 0 Ignored 
+OK

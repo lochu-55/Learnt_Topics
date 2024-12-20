@@ -1,0 +1,6 @@
+SWV ITM Data Console - ITM Port: 0
+./Core/Src/test_taskCreate_toggleLED.c:49:test_task_creation:PASS
+
+-----------------------
+1 Tests 0 Failures 0 Ignored 
+OK
