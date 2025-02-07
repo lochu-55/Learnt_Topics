@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.021" timestamp="2025-01-24T17:56:12.975339+05:30" hostname="lochu"><testcase classname="Inputs.test_sample_list_operations" name="test_list" time="0.001" /></testsuite></testsuites>
