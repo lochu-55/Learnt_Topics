@@ -1,0 +1,20 @@
+<slave>
+    <name>jyo_gpio</name>
+    <description>jyothsna Node's description</description>
+    <remoteFS>/home/vlab/jenkins</remoteFS>
+    <numExecutors>1</numExecutors>
+    <mode>NORMAL</mode>
+    <retentionStrategy class="hudson.slaves.RetentionStrategy$Always" />
+    <launcher class="hudson.plugins.sshslaves.SSHLauncher" plugin="ssh-slaves@3.1021.va_cc11b_de26a_e">
+        <host>172.16.203.40</host>
+        <port>22</port>
+        <credentialsId>jyo</credentialsId>
+        <launchTimeoutSeconds>60</launchTimeoutSeconds>
+        <maxNumRetries>10</maxNumRetries>
+        <retryWaitTime>15</retryWaitTime>
+        <sshHostKeyVerificationStrategy class="hudson.plugins.sshslaves.verifiers.NonVerifyingKeyVerificationStrategy" />
+        <tcpNoDelay>true</tcpNoDelay>
+    </launcher>
+    <label>jyo</label>
+    <nodeProperties />
+</slave>

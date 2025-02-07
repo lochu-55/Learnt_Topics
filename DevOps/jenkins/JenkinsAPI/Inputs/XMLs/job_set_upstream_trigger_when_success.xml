@@ -1,0 +1,32 @@
+<project>
+    <actions/>
+    <description>This is a sample job1</description>
+    <keepDependencies>false</keepDependencies>
+    <properties/>
+    <scm class="hudson.scm.NullSCM"/>
+    <canRoam>true</canRoam>
+    <disabled>false</disabled>
+    <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+    <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+    <triggers>
+        <jenkins.triggers.ReverseBuildTrigger>
+            <spec/>
+            <upstreamProjects>job2</upstreamProjects>
+            <threshold>
+                <name>SUCCESS</name>        <!-- use "UNSTABLE" to trigger even upstream job build has warning  -->
+                <ordinal>0</ordinal>        <!-- use '1' for unstable -->
+                <color>BLUE</color>         <!-- use 'YELLOW' for unstable -->
+                <completeBuild>true</completeBuild>
+            </threshold>
+        </jenkins.triggers.ReverseBuildTrigger>
+    </triggers>
+    <concurrentBuild>true</concurrentBuild>        <!-- enable it for concurrent building -->
+    <builders>
+        <hudson.tasks.Shell>
+            <command>echo "This is updated job1"</command>
+            <configuredLocalRules/>
+        </hudson.tasks.Shell>
+    </builders>
+    <publishers/>
+    <buildWrappers/>
+</project>
